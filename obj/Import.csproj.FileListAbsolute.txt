@@ -1,0 +1,11 @@
+D:\Projects\EPQS\Import\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\EPQS\Import\obj\Release\Import.exe
+D:\Projects\EPQS\Import\obj\Release\Import.pdb
+D:\Projects\EPQS\Import\Import.exe
+D:\Projects\EPQS\Import\Import.pdb
+D:\Projects\EPQS\Import\bin\Debug\Import.exe
+D:\Projects\EPQS\Import\bin\Debug\Import.pdb
+D:\Projects\EPQS\Import\bin\Debug\NExcel.dll
+D:\Projects\EPQS\Import\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\EPQS\Import\obj\Debug\Import.exe
+D:\Projects\EPQS\Import\obj\Debug\Import.pdb

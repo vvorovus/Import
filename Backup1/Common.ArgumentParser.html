@@ -1,0 +1,546 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+
+
+	<title>CodeProject: Full-featured Automatic Argument Parser. Free source code and programming help</title>
+	
+
+<meta name="Description" content="Argument parser utility class which makes good use of custom attributes.; Author: Sebastien Lorion; Section: Algorithms &amp; Recipes; Chapter: General Programming">
+<meta name="Keywords" content=".NET 1.0, .NET 1.1, C#, Windows, Visual Studio, Dev, Intermediate,Algorithms &amp; Recipes,General Programming,Free source code, tutorials">
+<meta name="Author" content="The Code Project">
+<meta name="Rating" content="General">
+<meta name="Robots" content="index, follow">
+<meta name="Revisit-After" content="1 days">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - All topics" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=1">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - MFC / C++" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=2">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - C#" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=3">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - ASP.NET" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=4">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - .NET" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=5">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - VB.NET" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=6">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Lounge Postings" href="http://www.codeproject.com/webservices/LoungeRSS.aspx">
+<link rel="search" type="application/opensearchdescription+xml" title="CodeProject" href="http://www.codeproject.com/info/OpenSearch.xml">
+		
+		
+	<!-- base -->
+	
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+<link rel="icon" href="file:///C:/ScrapBook/data/20080925135915/favicon.ico" type="image/ico">
+<link rel="shortcut icon" href="file:///C:/ScrapBook/data/20080925135915/favicon.ico" type="image/ico">
+
+
+<link rel="stylesheet" type="text/css" href="Common.ArgumentParser_files/index.css" media="all">
+<script charset="utf-8" id="injection_graph_func" src="Common.ArgumentParser_files/injection_graph_func.js"></script></head><body style="background-color: rgb(255, 255, 255);">
+
+<table id="ctl00_AT" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr valign="top">
+		
+	</tr>
+	<tr>
+		<td colspan="2" valign="top">
+			<a name="_top"></a>
+			<table id="ctl00_ArticleTopHeader_HeaderTable" class="ArticleHeader" border="0" cellpadding="3" cellspacing="0" width="100%">
+			<tbody><tr valign="top">
+				
+				
+			</tr>
+			<tr>
+				
+			</tr>
+		</tbody></table>
+		
+
+		</td>
+	</tr>
+	<tr valign="top">
+		
+		<td class="ArticlePane" valign="top">
+
+			
+<table class="SearchHeaderBar" cellspacing="0" width="100%">
+<tbody><tr>
+
+
+
+</tr>
+</tbody></table>
+
+			<span id="ctl00_ResultMessage"></span>
+			
+			<div id="ctl00_ArtDiv">
+			<table border="0" cellpadding="0" cellspacing="0">	
+			<tbody><tr valign="top">
+				
+				
+			</tr>
+			</tbody></table>
+			
+			
+			
+			
+
+			
+			
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			<span id="intelliTXT">
+			<div id="contentdiv">
+			
+			<!-- Main Page Contents Start -->
+			
+
+<!-- Article Starts -->
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Introduction0">Introduction</a> 
+</li><li><a href="#Quickexample1">Quick example</a> 
+</li><li><a href="#Usingthecode2">Using the code</a> 
+<ul>
+<li><a href="#Argumentparserclass3">ArgumentParser class</a> 
+<ul>
+<li><a href="#Properties4">Properties</a> 
+</li><li><a href="#Methods5">Methods</a> </li></ul>
+</li><li><a href="#Autosetmemberattribute6">AutoSetMemberAttribute</a> 
+<ul>
+<li><a href="#Properties7">Properties</a> </li></ul></li></ul>
+</li><li><a href="#Howitworks8">How it works ?</a> 
+<ul>
+<li><a href="#Parsingofthecommandline9">Parsing of the command line</a> 
+</li><li><a href="#Automaticallysettingmembervalues10">Automatically setting member values</a> </li></ul></li></ul>
+<h2><a name="Introduction0">Introduction</a></h2>
+<p>What? Yet another argument parsing class?! What for? Well, actually for a couple of reasons: 
+</p><ul>
+<li>Supports many argument types: 
+<ul>
+<li><b>Switches</b> (eg. /foo, /foo=1, /foo=true [localized]) 
+</li><li><b>Named/unnamed flags</b> (eg. -raFl, -aABCDEF). Flags are
+"type-safe" in the sense that you specify which values are accepted.
+For example, if the user writes -raFlW and 'W' is not an accepted flag,
+then an <code lang="cs">ArgumentFormatException</code> is raised. 
+</li><li><b>Named/unnamed values</b> (eg. /foo=bar, "foo") 
+</li><li><b>Any prefix(es) you specify</b> (eg. -foo, /foo, \foo, ...) 
+</li><li><b>Any assignment symbol(s)</b> (eg. /foo=bar, /foo:bar, ...) 
+</li><li><b>Any additional or overriding pattern you provide</b><br></li></ul>
+</li><li>Automatically sets field/property values according to arguments provided using custom attributes. 
+<ul>
+<li>All value types are supported, including enumerations. 
+</li><li>You can specify a single member, a class, a type (for static members) or an assembly. 
+</li><li>One argument can set many members at once, even if located in different types.<br></li></ul>
+</li><li>Supports globalization through custom attributes (ie you provide a <code>ResourceManager</code>, a <code>CultureInfo</code>
+and a resource ID and the argument name/alias will be automatically
+updated according to resource file). This works for switches, named
+values and flags.<br>
+</li><li>Keeps track of handled and unhandled arguments.<br>
+</li><li>All that in less than 400 lines of code. :)</li></ul>
+<p>I want to thank <a href="http://www.codeproject.com/script/profile/whos_who.asp?id=7917">Ray Hayes</a>
+for his idea of automatically setting field/property by judiciously
+using custom attributes. This is a great example of that proverbial 1%
+of inspiration. :) Take a look at his article <a href="http://www.codeproject.com/KB/recipes/commandlineparser.asp">here</a>.</p>
+<h2><a name="Quickexample1">Quick Example</a></h2>
+<p>This is an example quickly showing how you might use the class, more
+or less taken from the included demo, which by the way is a utility I
+posted some time ago on this site. You can read the article <a href="http://www.codeproject.com/KB/recipes/xmove.asp">here</a>. </p><div class="SmallText" id="premain0" style="width: 100%; cursor: pointer;"><img preid="0" src="Common.ArgumentParser_files/minus.gif" id="preimg0" height="9" width="9"><span preid="0" style="margin-bottom: 0pt;" id="precollapse0"> Collapse</span></div><pre style="margin-top: 0pt;" id="pre0" lang="cs"><span class="code-keyword">using</span> Common;
+<span class="code-keyword">using</span> Common.IO;
+<span class="code-keyword">using</span> System;
+<span class="code-keyword">using</span> System.Collections;
+<span class="code-keyword">using</span> System.Collections.Specialized;
+<span class="code-keyword">using</span> System.IO;
+
+<span class="code-keyword">namespace</span> xmove
+{
+    <span class="code-keyword">class</span> XMove
+    {
+        <span class="code-keyword">private</span> <span class="code-keyword">static</span> System.Resources.ResourceManager m_resMan;
+
+        <span class="code-comment">//</span><span class="code-comment"> this argument can either be named "batch", "file", "batchFile"
+</span>
+        <span class="code-comment">//</span><span class="code-comment"> or even "smurf" if you fancy it
+</span>
+        [AutoSetMember(<span class="code-string">"</span><span class="code-string">batch"</span>, <span class="code-string">"</span><span class="code-string">file"</span>, <span class="code-string">"</span><span class="code-string">batchFile"</span>, <span class="code-string">"</span><span class="code-string">smurf"</span>)]
+        <span class="code-keyword">private</span> <span class="code-keyword">static</span> <span class="code-SDKkeyword">String</span> m_batchFile;
+
+        [AutoSetMember(<span class="code-string">"</span><span class="code-string">yc"</span>, SwitchMeansFalse=true)]
+        <span class="code-keyword">private</span> <span class="code-keyword">static</span> <span class="code-keyword">bool</span> m_confirmMove = <span class="code-keyword">true</span>;
+
+        [AutoSetMember(<span class="code-string">"</span><span class="code-string">yc"</span>, SwitchMeansFalse=true)]
+        <span class="code-keyword">private</span> <span class="code-keyword">static</span> <span class="code-keyword">bool</span> m_confirmOverwrite = <span class="code-keyword">true</span>;
+        
+        [AutoSetMember(<span class="code-string">"</span><span class="code-string">r"</span>)]
+        <span class="code-keyword">private</span> <span class="code-keyword">static</span> <span class="code-keyword">bool</span> m_recursive = <span class="code-keyword">false</span>;
+        
+        <span class="code-keyword">private</span> <span class="code-keyword">static</span> FindFile.SearchAttributes m_searchAttributes;
+        
+        [STAThread]
+        <span class="code-keyword">static</span> <span class="code-keyword">void</span> Main(<span class="code-keyword">string</span>[] args)
+        {
+            <span class="code-comment">//</span><span class="code-comment"> a FlagCollection contains all accepted flags
+</span>
+            FlagCollection flags = <span class="code-keyword">new</span> FlagCollection();
+            
+            <span class="code-comment">//</span><span class="code-comment"> here we add the flag named "a" with accepted values
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> a,c,d,h,...
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> the argument must then looks like "-a&lt;VALUES&gt;" on the command
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> line
+</span>
+            flags.Add(<span class="code-string">"</span><span class="code-string">a"</span>, <span class="code-string">"</span><span class="code-string">acdehnorstFA"</span>);
+            
+            <span class="code-comment">//</span><span class="code-comment"> create a new parser that accept all argument formats,
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> is case sensitive and accept provided flags
+</span>
+            ArgumentParser parser = <span class="code-keyword">new</span> ArgumentParser(ArgumentFormats.All,
+                <span class="code-keyword">false</span>, flags);
+            
+            <span class="code-comment">//</span><span class="code-comment"> parse the arguments with the result stored in a
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> StringDictionary
+</span>
+            StringDictionary theArgs = parser.Parse(args);
+
+            <span class="code-comment">//</span><span class="code-comment"> automatically set all static members of the class XMove
+</span>
+            parser.AutoSetMembers(<span class="code-keyword">typeof</span>(XMove));
+            
+            <span class="code-comment">//</span><span class="code-comment"> now, the values of m_batchFile, m_confirmMove,
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> m_confirmOverwrite and m_recursive are all set !
+</span>
+            
+            <span class="code-comment">//</span><span class="code-comment"> the corresponding arguments have been moved to
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> parser.HandledArguments
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> the remaining arguments are in parser.UnhandledArguments
+</span>
+            
+            <span class="code-comment">//</span><span class="code-comment"> one argument remains which can't be set automatically
+</span>
+            <span class="code-keyword">if</span> (theArgs.ContainsKey(<span class="code-string">"</span><span class="code-string">a"</span>))
+            {
+                <span class="code-SDKkeyword">String</span> attribs = theArgs[m_resMan.GetString(<span class="code-string">"</span><span class="code-string">app0019"</span>)];
+                
+                <span class="code-keyword">if</span> (attribs.IndexOf(<span class="code-string">"</span><span class="code-string">A"</span>) &gt; -1)
+                    m_searchAttributes |= FindFile.SearchAttributes.All;
+
+                <span class="code-keyword">if</span> (attribs.IndexOf(<span class="code-string">"</span><span class="code-string">F"</span>) &gt; -1)
+                    m_searchAttributes |= FindFile.SearchAttributes.AnyFile;
+                
+                .........
+            }
+            
+            
+            <span class="code-comment">//</span><span class="code-comment"> here we load the resources for the application
+</span>
+            LoadResources();
+            
+            <span class="code-comment">//</span><span class="code-comment"> we then set the resource manager of the
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> AutoSetMemberAttribute accordingly
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> why this property is static is explained in the
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> "How it Works" section of this article
+</span>
+            AutoSetMemberAttribute.Resources = m_resMan;
+
+            <span class="code-comment">//</span><span class="code-comment"> create a new instance of Dummy class
+</span>
+            Dummy dummy = <span class="code-keyword">new</span> Dummy();
+            
+            <span class="code-comment">//</span><span class="code-comment"> then set members of this class, no matter if they are
+</span>
+            <span class="code-comment">//</span><span class="code-comment"> static, instance, public, private, protected, internal
+</span>
+            
+            <span class="code-comment">//</span><span class="code-comment"> type conversion is done automatically !
+</span>
+            parser.AutoSetMembers(dummy);
+        }
+        
+        <span class="code-keyword">private</span> <span class="code-keyword">void</span> LoadResources()
+        {
+            ....
+        }
+    }
+    
+    <span class="code-keyword">class</span> Dummy
+    {
+        <span class="code-keyword">public</span> <span class="code-keyword">enum</span> MyEnum
+        {
+            a,
+            b,
+            c,
+            d
+        }
+        
+        [AutoSetMember(<span class="code-string">"</span><span class="code-string">foo"</span>)]
+        <span class="code-keyword">private</span> <span class="code-keyword">static</span> <span class="code-keyword">int</span> field1;
+        
+        <span class="code-comment">//</span><span class="code-comment"> here we indicate that the argument name is to be retrieved using
+</span>
+        <span class="code-comment">//</span><span class="code-comment"> the ResourceManager at runtime
+</span>
+        [AutoSetMember(ResID=<span class="code-string">"</span><span class="code-string">0001"</span>)]
+        <span class="code-keyword">private</span> <span class="code-SDKkeyword">Double</span> field2;
+        
+        <span class="code-comment">//</span><span class="code-comment"> same here
+</span>
+        [AutoSetMember(ResID=<span class="code-string">"</span><span class="code-string">0002"</span>)]
+        <span class="code-keyword">protected</span> <span class="code-SDKkeyword">String</span> Property1
+        {
+            <span class="code-keyword">get</span> {...}
+            <span class="code-keyword">set</span> {...}
+        }
+        
+        [AutoSetMember(<span class="code-string">"</span><span class="code-string">buzz"</span>)]
+        <span class="code-keyword">public</span> MyEnum Property2
+        {
+            <span class="code-keyword">get</span> {...}
+            <span class="code-keyword">set</span> {...}
+        }
+    }
+}</pre>
+<h2><a name="Usingthecode2">Using the code</a></h2>
+<p>Two main classes do all the work: <code lang="cs">ArgumentParser</code> and <code lang="cs">AutoSetMemberAttribute</code>. As usual, contructors let you directly set one or more properties, so I will skip them.</p>
+<h3><a name="Argumentparserclass3">ArgumentParser class</a></h3>
+<h4><a name="Properties4">Properties</a></h4>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">char</span>[] AllowedPrefixes [<span class="code-keyword">get</span>, <span class="code-keyword">set</span>]</code><br>The accepted prefix(es).</p>
+<p><code lang="cs"><span class="code-keyword">public</span> ArgumentFormats ArgumentFormats [<span class="code-keyword">get</span>, <span class="code-keyword">set</span>]<br></code>The accepted argument format(s).</p>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">char</span>[] AssignSymbols [<span class="code-keyword">get</span>, <span class="code-keyword">set</span>]</code><br>The accepted assignation symbol(s).</p>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">string</span> CustomPattern [<span class="code-keyword">get</span>, <span class="code-keyword">set</span>]</code><br>An additional or overriding pattern. In the pattern, use capture name constants made public by this class (<code lang="cs">ArgumentNameCaptureName</code>, <code lang="cs">ArgumentValueCaptureName</code>, <code lang="cs">FlagNameCaptureName</code>, <code lang="cs">FlagsCaptureName</code> and <code lang="cs">PrefixCaptureName</code>).</p>
+<p><code lang="cs"><span class="code-keyword">public</span> StringDictionary HandledArguments [<span class="code-keyword">get</span>]</code><br>The argument(s) that have been automatically set by <code>AutoSetMembers</code> method.</p>
+<p><code lang="cs"><span class="code-keyword">public</span> StringDictionary UnhandledArguments [<span class="code-keyword">get</span>]</code><br>The argument(s) that have not been automatically set by <code>AutoSetMembers</code> method.</p>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">bool</span> UseOnlyCustomPattern [<span class="code-keyword">get</span>, <span class="code-keyword">set</span>]</code><br>Indicates if the custom pattern provided is overriding the internal pattern automatically generated.</p>
+<h4><a name="Methods5">Methods</a></h4>
+<p><code lang="cs"><span class="code-keyword">public</span> StringDictionary Parse(<span class="code-keyword">string</span>[] args)</code><br>Parses the array of arguments and returns the dictionary of parsed arguments<br><code lang="cs">UnhandledArgument</code> property is also updated accordingly.</p>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">void</span> AutoSetMembers(Assembly assembly)</code><br><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">void</span> AutoSetMembers(Type type)</code><br><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">void</span> AutoSetMembers(<span class="code-keyword">object</span> instance)</code><br><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">void</span> AutoSetMembers(<span class="code-keyword">object</span> classToProcess, MemberInfo member)</code><br>Automatically sets member(s) of the provided assembly, type, class instance. Also works for a single field/property.</p>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">void</span> Clear()</code><br>Clears all saved arguments (both handled and unhandled).</p>
+<p><code lang="cs"><span class="code-keyword">private</span> <span class="code-keyword">void</span> BuildPattern()</code><br>Builds the pattern to be used when parsing each argument.</p>
+<p><code lang="cs"><span class="code-keyword">private</span> <span class="code-keyword">void</span> SetMemberValue(<span class="code-keyword">object</span> instance, MemberInfo memberInfo, <span class="code-keyword">object</span> value)<br></code>Set the static or instance member to the specified value.</p>
+<h3><a name="Autosetmemberattribute6">AutoSetMemberAttribute</a></h3>
+<h4><a name="Properties7">Properties</a></h4>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">static</span> CultureInfo Culture [<span class="code-keyword">get</span>, <span class="code-keyword">set</span>]</code><br>The culture to be used for retrieving culture aware aliases.</p>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">static</span> ResourceManager Resources [<span class="code-keyword">get</span>, <span class="code-keyword">set</span>]</code><br>The resource manager to be used for retrieving culture aware aliases.<br></p>
+<p><code lang="cs"><span class="code-keyword">public</span> ArrayList Aliases [<span class="code-keyword">get</span>]</code><br>Command line argument's name or aliases if many names are possible.</p>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">string</span> Description [<span class="code-keyword">get</span>, <span class="code-keyword">set</span>]</code><br>The description of the command line argument.</p>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">object</span> ID [<span class="code-keyword">get</span>, <span class="code-keyword">set</span>]</code><br>An ID (can be anything you want).</p>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">string</span> ResID [<span class="code-keyword">get</span>, <span class="code-keyword">set</span>]</code><br>The resource ID to be used when retrieving culture aware aliases.</p>
+<p><code lang="cs"><span class="code-keyword">public</span> <span class="code-keyword">bool</span> SwitchMeansFalse [<span class="code-keyword">get</span>, <span class="code-keyword">set</span>]</code><br>Indicates if the meaning of a switch is false instead of true as usual.</p>
+<h2>How it Works</h2>
+<h3><a name="Parsingofthecommandline9">Parsing of the command line</a></h3>
+<p>Here is a quick explanation of the regex that is constructed by <code lang="cs">ArgumentParser.BuildPattern()</code> private method. Variables are indicated by capitalized names and are to be replaced at runtime.</p><div class="SmallText" id="premain1" style="width: 100%; cursor: pointer;"><img preid="1" src="Common.ArgumentParser_files/minus.gif" id="preimg1" height="9" width="9"><span preid="1" style="margin-bottom: 0pt;" id="precollapse1"> Collapse</span></div><pre style="margin-top: 0pt;" id="pre1" lang="text">// The whole parsing string (with all possible argument formats) :
+// ---------------------------------------------------------------
+// (CUSTOM_PATTERN)
+// |(^(?<prefix>[PREFIXES])(?&lt;FLAGNAME&gt;)FLAG_NAMES)(?&lt;FLAGS&gt;[FlagsCaptureName]+)$)
+// |(^(?<prefix>[PREFIXES])(?&lt;NAME&gt;[^EQUAL_SYMBOLS]+)([EQUAL_SYMBOLS](?&lt;VALUE&gt;.+))?$)
+// |(LITERAL_STRING_SYMBOL?(?&lt;VALUE&gt;.*))
+//
+// Again, but commented :
+// ----------------------
+// (CUSTOM_PATTERN)|        # custom pattern, if any (it has priority over
+//                          # standard pattern)
+//
+// foreach flag in FlagCollection :
+//
+// (^
+// (?<prefix>[PREFIXES])            # mandatory prefix
+// (?&lt;FLAGNAME&gt;)FLAG_NAMES)       # flag name
+// (?&lt;FLAGS&gt;[FlagsCaptureName]+)  # flag value
+// $)|
+//
+// (^
+// (?<prefix>[PREFIXES])            # mandatory prefix
+// (?&lt;NAME&gt;[^EQUAL_SYMBOLS]+)     # argument name (which includes flag
+//                                # name/values)
+// ([EQUAL_SYMBOLS](?&lt;VALUE&gt;.+))? # argument value, if any
+// $)
+//
+// |(
+// LITERAL_STRING_SYMBOL?   # optional @ caracter indicating literal string
+// (?&lt;VALUE&gt;.*)             # standalone value (will be given an index when
+//                          # parsed in Parse() method)
+// )</prefix></prefix></prefix></prefix></pre>
+<h3><a name="Automaticallysettingmembervalues10">Automatically setting member values</a></h3>
+<p><a name="Automaticallysettingmembervalues10">At design time, <code lang="cs">AutoSetMemberAttribute</code>
+custom attribute is used to specify which argument will be used to set
+the affected member. Other informations include description, resource
+ID and an ID that you might use at your convenience.</a></p>
+<p><a name="Automaticallysettingmembervalues10">At runtime, you can set the <code lang="cs">AutoSetMemberAtttribute</code> static properties <code lang="cs">Resource</code> and <code lang="cs">Culture</code>.
+It's necessary to make those properties static because attributes are
+serialized at compile time, so they can only have constant values as
+instance properties.</a></p>
+<p><a name="Automaticallysettingmembervalues10">When you execute <code lang="cs">ArgumentParser.SetAutoMembers(...)</code>, the following occurs :</a></p>
+<ol>
+<li><code><a name="Automaticallysettingmembervalues10">AutoSetMember</a></code><a name="Automaticallysettingmembervalues10"> attributes will be located using reflection. 
+</a></li><li><a name="Automaticallysettingmembervalues10">If a resource
+ID is specified and a resource manager and a culture are provided, the
+localized argument name will be added as an alias. </a></li><li><a name="Automaticallysettingmembervalues10">The argument associated to the member (if any) will be converted to the member's type 
+</a></li><li><a name="Automaticallysettingmembervalues10">The member's value will be updated using <code lang="cs">ArgumentParser.SetMemberValue(...)</code>. 
+</a></li><li><a name="Automaticallysettingmembervalues10">The argument will be removed from <code lang="cs">ArgumentParser.UnhandledArguments</code> and added to <code lang="cs">ArgumentParser.HandledArguments</code>.</a></li></ol><pre lang="cs"><span class="code-SummaryComment"><a name="Automaticallysettingmembervalues10">///</a></span><span class="code-comment"><a name="Automaticallysettingmembervalues10"> <span class="code-SummaryComment">&lt;</span><span class="code-SummaryComment">SUMMARY</span><span class="code-SummaryComment">&gt;</span>
+</a></span>
+<span class="code-SummaryComment"><a name="Automaticallysettingmembervalues10">///</a></span><span class="code-comment"><a name="Automaticallysettingmembervalues10"> Automatically sets members for the provided
+</a></span>
+<span class="code-SummaryComment"><a name="Automaticallysettingmembervalues10">///</a></span><span class="code-comment"><a name="Automaticallysettingmembervalues10"> <span class="code-SummaryComment">&lt;</span><span class="code-SummaryComment">SEE</span> <span class="code-SummaryComment">cref="System.Reflection.Assembly"</span> <span class="code-SummaryComment">/</span><span class="code-SummaryComment">&gt;</span>.
+</a></span>
+<span class="code-SummaryComment"><a name="Automaticallysettingmembervalues10">///</a></span><span class="code-comment"><a name="Automaticallysettingmembervalues10"> <span class="code-SummaryComment">&lt;</span><span class="code-SummaryComment">/</span><span class="code-SummaryComment">SUMMARY</span><span class="code-SummaryComment">&gt;</span>
+</a></span>
+<span class="code-SummaryComment"><a name="Automaticallysettingmembervalues10">///</a></span><span class="code-comment"><a name="Automaticallysettingmembervalues10"> </a></span></pre></div></span></div><param name="&quot;assembly&quot;"><param name="&quot;type&quot;"><param name="&quot;instance&quot;"><param name="&quot;classToProcess&quot;"><param name="&quot;member&quot;"><param name="&quot;instance&quot;"><param name="&quot;memberInfo&quot;"><param name="&quot;value&quot;">
+
+
+
+<!-- Article Ends -->
+
+
+			<!-- Main Page Contents End -->
+			
+			
+			
+			
+			<form name="aspnetForm" method="post" action="http://www.codeproject.com/KB/recipes/argumentparser.aspx" id="aspnetForm" style="margin: 0pt; padding: 0pt;">
+		<div>
+		<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwMDUyNjYzMjhkZPm/QXcie06YwB2VPo6OGZr4iE6Y" type="hidden">
+		</div>
+		
+
+			
+			<h2>License</h2>
+			<div id="ctl00_LicenseTerms"><p>This
+article has no explicit license attached to it but may contain usage
+terms in the article text or the download files themselves. If in doubt
+please contact the author via the discussion board below.</p><p>A list of licenses authors might use can be found <a href="http://www.codeproject.com/info/Licenses.aspx">here</a></p></div>
+			
+			
+			
+					
+            
+<table border="0" cellpadding="0" cellspacing="5" width="100%">
+<tbody><tr valign="top">
+
+		
+
+</tr>
+</tbody></table>
+
+					<br>
+				
+			
+			<table id="ctl00_PopularArticlesRow" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody><tr valign="top">
+				
+				<td>
+					<a href="http://www.codeproject.com/Redir.aspx?adid=7448&amp;way=ban" target="_top" rel="nofollow"></a>
+				</td>
+			</tr>
+		</tbody></table>
+		
+		
+			
+			
+			<table id="ctl00_RateArticleRow" class="RatingBar" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody><tr>
+				
+				<td align="right">            
+<table cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+
+	
+	
+	<td id="voteTbl" style="white-space: nowrap;" class="SmallText" align="right">
+	
+		<table><tbody><tr>
+		
+				
+		
+		
+		
+		
+		<td><span id="ctl00_RateArticle_ErrorMessage"></span></td>
+		</tr></tbody></table>
+	</td>
+</tr></tbody></table>
+
+
+
+</td>
+			</tr>
+		</tbody></table>
+		
+			</form>
+			
+			
+
+			<a name="_comments"></a><!-- Forum Start -->
+<div id="_MessageBoard" onclick="return SwitchMessage(event, null)">
+	
+</div>
+<!-- Forum End -->
+
+
+
+
+			
+			
+			<table width="100%">
+			<tbody><tr valign="top">
+				
+				
+			</tr>
+			
+			</tbody></table>
+			
+			<center>
+				
+			</center>
+		</td>
+</tr>
+<tr>
+	<td colspan="2" align="center">
+		
+
+
+
+		</td>
+</tr>
+</tbody></table><div style="position: absolute; left: 155px; top: 606px; z-index: 1000000000 ! important; visibility: hidden; opacity: 1; height: 16px; width: 16px;" id="linkalert-box"><img style="width: 16px;" src="Common.ArgumentParser_files/unsecure-icon.png" id="linkalert-icon-1"></div>
+
+<br>
+
+
+
+
+
+
+
+
+<div style="position: absolute; visibility: visible; z-index: 101; width: 386px; height: 22px; top: 126px; left: 1149px;"></div><div class="NavBarCont" style="position: absolute; visibility: hidden; z-index: 102; width: 198px; height: 104px; top: 0pt; left: 0pt;"><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 183px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 5px;">What is 'The Code Project'?</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 183px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 24px;">General FAQ</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 183px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 43px;">Post a Question</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 183px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 62px;">Site Directory</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 183px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 81px;">About Us</div></div><div class="NavBarCont" style="position: absolute; visibility: hidden; z-index: 102; width: 158px; height: 161px; top: 0pt; left: 0pt;"><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 5px;">Latest</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 24px;">Search</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 43px;">Most Popular</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 62px;">Beginner Articles</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 81px;">Topic List</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 100px;">Submit an Article</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 119px;">Update an Article</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 138px;">Article Competition</div></div><div class="NavBarCont" style="position: absolute; visibility: hidden; z-index: 102; width: 183px; height: 389px; top: 0pt; left: 0pt;"><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 5px;">ASP.NET</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 24px;">ATL / WTL / STL</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 43px;">C++ / MFC</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 62px;">(Managed) C++/CLI</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 81px;">C#</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 100px;">COM</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 119px;">Hardware</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 138px;">LINQ and .NET 3.5</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 157px;">.NET Framework</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 176px;">OS / SysAdmin</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 195px;">Silverlight</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 214px;">SQL and Database</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 233px;">VB.NET</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 252px;">Web Development</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 271px;">WPF / WCF / WF</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 290px;">XML / XSL</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 309px;">General Discussions</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 328px;">Suggestions / Site Bugs</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 347px;">The Soapbox</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 366px;">All Message Boards...</div></div><div style="position: absolute; left: 477px; top: 386px; z-index: 1000000000 ! important; visibility: hidden; opacity: 1; width: 16px; height: 16px;" id="linkalert-box"><img style="width: 16px;" src="Common.ArgumentParser_files/zip-icon.png" id="linkalert-icon-1"></div></body></html>

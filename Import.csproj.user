@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartArguments>O:\\Data\\80020_0000000000_20230101_9_2934.xml /import=sum</StartArguments>
+    <StartWorkingDirectory>D:\Projects\Import</StartWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <StartArguments>O:\Data\askuempaes.ru\Customers\РТПЦ\2019\05\80020_7717127211_20190501_1956285.xml  /import=sum</StartArguments>
+    <StartWorkingDirectory>D:\Projects\Import</StartWorkingDirectory>
+  </PropertyGroup>
+</Project>

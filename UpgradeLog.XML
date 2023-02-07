@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Import">
+</Property><Property Name="Solution File" Value="D:\Projects\EPQS\Import\Import.sln">
+</Property><Property Name="User Options File" Value="D:\Projects\EPQS\Import\Import.suo">
+</Property><Property Name="Date" Value="18 сентября 2008 г.">
+</Property><Property Name="Time" Value="8:23">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Import.sln" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\Import.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Import.suo" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\Import.suo">
+</Event><Event ErrorLevel="0" Project="Import" Source="Import.csproj" Description="Project file successfully backed up as D:\Projects\EPQS\Import\Backup\Import.csproj">
+</Event><Event ErrorLevel="0" Project="Import" Source="Import.csproj.user" Description="Project user file successfully backed up as D:\Projects\EPQS\Import\Backup\Import.csproj.user">
+</Event><Event ErrorLevel="0" Project="Import" Source="C-01.cs" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\C-01.cs">
+</Event><Event ErrorLevel="0" Project="Import" Source="C.cs" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\C.cs">
+</Event><Event ErrorLevel="0" Project="Import" Source="Excel2.cs" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\Excel2.cs">
+</Event><Event ErrorLevel="0" Project="Import" Source="EPQS.cs" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\EPQS.cs">
+</Event><Event ErrorLevel="0" Project="Import" Source="Excel.cs" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\Excel.cs">
+</Event><Event ErrorLevel="0" Project="Import" Source="ExcelMir.cs" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\ExcelMir.cs">
+</Event><Event ErrorLevel="0" Project="Import" Source="F51070.cs" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\F51070.cs">
+</Event><Event ErrorLevel="0" Project="Import" Source="F80020.cs" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\F80020.cs">
+</Event><Event ErrorLevel="0" Project="Import" Source="FCOM.cs" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\FCOM.cs">
+</Event><Event ErrorLevel="0" Project="Import" Source="Program.cs" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="Import" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\Projects\EPQS\Import\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Import" Source="Import.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Import" Source="Import.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Import.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Import.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Import" Source="Import.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

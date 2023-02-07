@@ -1,0 +1,1 @@
+@for /F "tokens=1,2 delims= " %%i in ('typetime "yyyyMMdd hh-mm-ss-ffff"') do call 7z.bat "%~dp1%%i-%~n1-%%j" %1

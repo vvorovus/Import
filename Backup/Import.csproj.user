@@ -1,0 +1,10 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartArguments>"D:\АСКУЭ\Import\80020_1901064509_20080731_492.xml"</StartArguments>
+    <StartWorkingDirectory>D:\Projects\EPQS\Import</StartWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <StartArguments>"D:\АСКУЭ\Import\80020_1901064509_20080731_492.xml"</StartArguments>
+    <StartWorkingDirectory>D:\Projects\EPQS\Import</StartWorkingDirectory>
+  </PropertyGroup>
+</Project>

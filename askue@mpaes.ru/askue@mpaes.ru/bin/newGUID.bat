@@ -1,0 +1,1 @@
+@for /F "tokens=1" %%i in ('guid') do @set guid=%%i

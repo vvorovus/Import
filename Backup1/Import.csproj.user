@@ -1,0 +1,10 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartArguments>O:\\Data\\"80020_8888888888_20130101_521_0000000008.xml" /import=sum /lock</StartArguments>
+    <StartWorkingDirectory>D:\Projects\Import</StartWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <StartArguments>O:\\Data\\"80020_8888888888_20130101_521_0000000008.xml" /import=sum /lock</StartArguments>
+    <StartWorkingDirectory>D:\Projects\Import</StartWorkingDirectory>
+  </PropertyGroup>
+</Project>

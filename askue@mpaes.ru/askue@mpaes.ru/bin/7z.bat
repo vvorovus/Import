@@ -1,0 +1,1 @@
+@7za.exe -r -t7z -mx=9 -scsDOS a %1.7z %2 >nul

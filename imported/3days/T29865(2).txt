@@ -1,0 +1,15 @@
+
+<pre>
+Day=16,Month=12,Year=2008,Hour=1,Cloud=2,Precip=10,MaxP=750,MinP=748,MaxT=-22,MinT=-24,MinW=1,MaxW=3,RumbW=4,MaxRW=98,MinRW=93,MaxHT=-22,MinHT=-24
+Day=16,Month=12,Year=2008,Hour=7,Cloud=2,Precip=10,MaxP=748,MinP=746,MaxT=-19,MinT=-21,MinW=2,MaxW=5,RumbW=4,MaxRW=97,MinRW=92,MaxHT=-19,MinHT=-21
+Day=16,Month=12,Year=2008,Hour=13,Cloud=3,Precip=10,MaxP=747,MinP=745,MaxT=-14,MinT=-16,MinW=3,MaxW=6,RumbW=4,MaxRW=96,MinRW=91,MaxHT=-14,MinHT=-16
+Day=16,Month=12,Year=2008,Hour=19,Cloud=3,Precip=10,MaxP=746,MinP=744,MaxT=-7,MinT=-9,MinW=3,MaxW=6,RumbW=5,MaxRW=96,MinRW=91,MaxHT=-7,MinHT=-9
+Day=17,Month=12,Year=2008,Hour=1,Cloud=3,Precip=6,MaxP=745,MinP=743,MaxT=-8,MinT=-10,MinW=3,MaxW=6,RumbW=4,MaxRW=96,MinRW=91,MaxHT=-8,MinHT=-10
+Day=17,Month=12,Year=2008,Hour=7,Cloud=3,Precip=6,MaxP=743,MinP=741,MaxT=-5,MinT=-7,MinW=3,MaxW=6,RumbW=4,MaxRW=96,MinRW=91,MaxHT=-6,MinHT=-8
+Day=17,Month=12,Year=2008,Hour=13,Cloud=3,Precip=6,MaxP=742,MinP=740,MaxT=-6,MinT=-8,MinW=3,MaxW=6,RumbW=5,MaxRW=96,MinRW=91,MaxHT=-7,MinHT=-9
+Day=17,Month=12,Year=2008,Hour=19,Cloud=3,Precip=6,MaxP=742,MinP=740,MaxT=-6,MinT=-8,MinW=3,MaxW=6,RumbW=6,MaxRW=96,MinRW=91,MaxHT=-7,MinHT=-9
+Day=18,Month=12,Year=2008,Hour=1,Cloud=3,Precip=6,MaxP=744,MinP=742,MaxT=-12,MinT=-14,MinW=3,MaxW=6,RumbW=6,MaxRW=97,MinRW=92,MaxHT=-12,MinHT=-14
+Day=18,Month=12,Year=2008,Hour=7,Cloud=2,Precip=10,MaxP=748,MinP=746,MaxT=-15,MinT=-17,MinW=3,MaxW=6,RumbW=6,MaxRW=97,MinRW=92,MaxHT=-15,MinHT=-17
+Day=18,Month=12,Year=2008,Hour=13,Cloud=2,Precip=10,MaxP=751,MinP=749,MaxT=-14,MinT=-16,MinW=2,MaxW=5,RumbW=6,MaxRW=96,MinRW=91,MaxHT=-14,MinHT=-16
+Day=18,Month=12,Year=2008,Hour=19,Cloud=3,Precip=10,MaxP=751,MinP=749,MaxT=-18,MinT=-20,MinW=1,MaxW=3,RumbW=5,MaxRW=98,MinRW=93,MaxHT=-18,MinHT=-20
+

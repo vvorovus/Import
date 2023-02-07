@@ -1,0 +1,13 @@
+D:\Projects\EPQS\Import\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\EPQS\Import\obj\Release\Import.exe
+D:\Projects\EPQS\Import\obj\Release\Import.pdb
+D:\Projects\EPQS\Import\Import.exe
+D:\Projects\EPQS\Import\Import.pdb
+D:\Projects\Import\obj\Release\Import.exe
+D:\Projects\Import\obj\Release\Import.pdb
+D:\Projects\Import\Import.exe
+D:\Projects\Import\Import.pdb
+D:\Projects\Import\Import.exe.config
+D:\Projects\Import\obj\Release\Import.csprojAssemblyReference.cache
+D:\Projects\Import\obj\Release\Import.csproj.CoreCompileInputs.cache
+D:\Projects\Import\obj\Release\Import.csproj.CopyComplete

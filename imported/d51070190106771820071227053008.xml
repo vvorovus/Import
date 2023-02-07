@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<package class="51070" created="20071227053008GMT+7" id="{0742F378-E42E-4500-A10B-63D146831B9E}" sender="1901067718" version="1">
+  <group code="ТЕМПЕРАТУРА">
+    <flow begin="200712260000GMT+7" end="200712260100GMT+7" power="-13"/>
+    <flow begin="200712260100GMT+7" end="200712260200GMT+7" power="-14"/>
+    <flow begin="200712260200GMT+7" end="200712260300GMT+7" power="-15"/>
+    <flow begin="200712260300GMT+7" end="200712260400GMT+7" power="-14"/>
+    <flow begin="200712260400GMT+7" end="200712260500GMT+7" power="-17"/>
+    <flow begin="200712260500GMT+7" end="200712260600GMT+7" power="-16"/>
+    <flow begin="200712260600GMT+7" end="200712260700GMT+7" power="-18"/>
+    <flow begin="200712260700GMT+7" end="200712260800GMT+7" power="-18"/>
+    <flow begin="200712260800GMT+7" end="200712260900GMT+7" power="-19"/>
+    <flow begin="200712260900GMT+7" end="200712261000GMT+7" power="-19"/>
+    <flow begin="200712261000GMT+7" end="200712261100GMT+7" power="-18"/>
+    <flow begin="200712261100GMT+7" end="200712261200GMT+7" power="-16"/>
+    <flow begin="200712261200GMT+7" end="200712261300GMT+7" power="-15"/>
+    <flow begin="200712261300GMT+7" end="200712261400GMT+7" power="-14"/>
+    <flow begin="200712261400GMT+7" end="200712261500GMT+7" power="-13"/>
+    <flow begin="200712261500GMT+7" end="200712261600GMT+7" power="-14"/>
+    <flow begin="200712261600GMT+7" end="200712261700GMT+7" power="-14"/>
+    <flow begin="200712261700GMT+7" end="200712261800GMT+7" power="-13"/>
+    <flow begin="200712261800GMT+7" end="200712261900GMT+7" power="-13"/>
+    <flow begin="200712261900GMT+7" end="200712262000GMT+7" power="-13"/>
+    <flow begin="200712262000GMT+7" end="200712262100GMT+7" power="-13"/>
+    <flow begin="200712262100GMT+7" end="200712262200GMT+7" power="-14"/>
+    <flow begin="200712262200GMT+7" end="200712262300GMT+7" power="-15"/>
+    <flow begin="200712262300GMT+7" end="200712270000GMT+7" power="-15"/>
+  </group>
+</package>

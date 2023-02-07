@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<package class="51070" created="20080718053007GMT+7" id="{EA23BB1B-BF0A-48C7-8CF0-5D4AE87C0C4F}" sender="1901067718" version="1">
+  <group code="ТЕМПЕРАТУРА">
+    <flow begin="200807170000GMT+7" end="200807170100GMT+7" power="23"/>
+    <flow begin="200807170100GMT+7" end="200807170200GMT+7" power="22"/>
+    <flow begin="200807170200GMT+7" end="200807170300GMT+7" power="22"/>
+    <flow begin="200807170300GMT+7" end="200807170400GMT+7" power="21"/>
+    <flow begin="200807170400GMT+7" end="200807170500GMT+7" power="21"/>
+    <flow begin="200807170500GMT+7" end="200807170600GMT+7" power="20"/>
+    <flow begin="200807170600GMT+7" end="200807170700GMT+7" power="19"/>
+    <flow begin="200807170700GMT+7" end="200807170800GMT+7" power="20"/>
+    <flow begin="200807170800GMT+7" end="200807170900GMT+7" power="22"/>
+    <flow begin="200807170900GMT+7" end="200807171000GMT+7" power="23"/>
+    <flow begin="200807171000GMT+7" end="200807171100GMT+7" power="26"/>
+    <flow begin="200807171100GMT+7" end="200807171200GMT+7" power="28"/>
+    <flow begin="200807171200GMT+7" end="200807171300GMT+7" power="28"/>
+    <flow begin="200807171300GMT+7" end="200807171400GMT+7" power="31"/>
+    <flow begin="200807171400GMT+7" end="200807171500GMT+7" power="33"/>
+    <flow begin="200807171500GMT+7" end="200807171600GMT+7" power="33"/>
+    <flow begin="200807171600GMT+7" end="200807171700GMT+7" power="33"/>
+    <flow begin="200807171700GMT+7" end="200807171800GMT+7" power="32"/>
+    <flow begin="200807171800GMT+7" end="200807171900GMT+7" power="31"/>
+    <flow begin="200807171900GMT+7" end="200807172000GMT+7" power="30"/>
+    <flow begin="200807172000GMT+7" end="200807172100GMT+7" power="29"/>
+    <flow begin="200807172100GMT+7" end="200807172200GMT+7" power="27"/>
+    <flow begin="200807172200GMT+7" end="200807172300GMT+7" power="25"/>
+    <flow begin="200807172300GMT+7" end="200807180000GMT+7" power="24"/>
+  </group>
+</package>

@@ -1,0 +1,15 @@
+D:\Projects\EPQS\Import\obj\Debug\Import.exe
+D:\Projects\EPQS\Import\obj\Debug\Import.pdb
+D:\Projects\EPQS\Import\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\EPQS\Import\bin\Debug\Import.exe
+D:\Projects\EPQS\Import\bin\Debug\Import.pdb
+D:\Projects\EPQS\Import\bin\Debug\NExcel.dll
+D:\Projects\Import\bin\Debug\Import.exe
+D:\Projects\Import\bin\Debug\Import.pdb
+D:\Projects\Import\bin\Debug\NExcel.dll
+D:\Projects\Import\obj\Debug\Import.exe
+D:\Projects\Import\obj\Debug\Import.pdb
+D:\Projects\Import\bin\Debug\Import.exe.config
+D:\Projects\Import\obj\Debug\Import.csproj.CoreCompileInputs.cache
+D:\Projects\Import\obj\Debug\Import.csproj.CopyComplete
+D:\Projects\Import\obj\Debug\Import.csprojAssemblyReference.cache

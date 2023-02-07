@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<message class="80020" version="2" number="408">
+<datetime>
+<timestamp>20080723065513</timestamp>
+<daylightsavingtime>1</daylightsavingtime>
+<day>20080722</day>
+</datetime>
+<sender>
+<name>Название предприятия по классификации НП АТС</name>
+<inn>0123456789</inn>
+</sender>
+<area>
+<name>Хакасэнерго РСК</name>
+<inn>1900000600</inn>
+<measuringpoint code="192070016213315" name="СаЭС:Подсинее:яч.15:яч.15">
+<measuringchannel code="01" desc="счетчик-активная,прием">
+<period start="0000" end="0030">
+<value status="0">0</value>
+</period>
+<period start="0030" end="0100">
+<value status="0">0</value>
+</period>
+<period start="0100" end="0130">
+<value status="0">0</value>
+</period>
+<period start="0130" end="0200">
+<value status="0">0</value>
+</period>
+<period start="0200" end="0230">
+<value status="0">0</value>
+</period>
+<period start="0230" end="0300">
+<value status="0">0</value>
+</period>
+<period start="0300" end="0330">
+<value status="0">0</value>
+</period>
+<period start="0330" end="0400">
+<value status="0">0</value>
+</period>
+<period start="0400" end="0430">
+<value status="0">0</value>
+</period>
+<period start="0430" end="0500">
+<value status="0">0</value>
+</period>
+<period start="0500" end="0530">
+<value status="0">0</value>
+</period>
+<period start="0530" end="0600">
+<value status="0">0</value>
+</period>
+<period start="0600" end="0630">
+<value status="0">0</value>
+</period>
+<period start="0630" end="0700">
+<value status="0">0</value>
+</period>
+<period start="0700" end="0730">
+<value status="0">0</value>
+</period>
+<period start="0730" end="0800">
+<value status="0">0</value>
+</period>
+<period start="0800" end="0830">
+<value status="0">0</value>
+</period>
+<period start="0830" end="0900">
+<value status="0">0</value>
+</period>
+<period start="0900" end="0930">
+<value status="0">0</value>
+</period>
+<period start="0930" end="1000">
+<value status="0">0</value>
+</period>
+<period start="1000" end="1030">
+<value status="0">0</value>
+</period>
+<period start="1030" end="1100">
+<value status="0">0</value>
+</period>
+<period start="1100" end="1130">
+<value status="0">0</value>
+</period>
+<period start="1130" end="1200">
+<value status="0">0</value>
+</period>
+<period start="1200" end="1230">
+<value status="0">0</value>
+</period>
+<period start="1230" end="1300">
+<value status="0">0</value>
+</period>
+<period start="1300" end="1330">
+<value status="0">0</value>
+</period>
+<period start="1330" end="1400">
+<value status="0">0</value>
+</period>
+<period start="1400" end="1430">
+<value status="0">0</value>
+</period>
+<period start="1430" end="1500">
+<value status="0">0</value>
+</period>
+<period start="1500" end="1530">
+<value status="0">0</value>
+</period>
+<period start="1530" end="1600">
+<value status="0">0</value>
+</period>
+<period start="1600" end="1630">
+<value status="0">0</value>
+</period>
+<period start="1630" end="1700">
+<value status="0">0</value>
+</period>
+<period start="1700" end="1730">
+<value status="0">0</value>
+</period>
+<period start="1730" end="1800">
+<value status="0">0</value>
+</period>
+<period start="1800" end="1830">
+<value status="0">0</value>
+</period>
+<period start="1830" end="1900">
+<value status="0">0</value>
+</period>
+<period start="1900" end="1930">
+<value status="0">0</value>
+</period>
+<period start="1930" end="2000">
+<value status="0">0</value>
+</period>
+<period start="2000" end="2030">
+<value status="0">0</value>
+</period>
+<period start="2030" end="2100">
+<value status="0">0</value>
+</period>
+<period start="2100" end="2130">
+<value status="0">0</value>
+</period>
+<period start="2130" end="2200">
+<value status="0">0</value>
+</period>
+<period start="2200" end="2230">
+<value status="0">0</value>
+</period>
+<period start="2230" end="2300">
+<value status="0">0</value>
+</period>
+<period start="2300" end="2330">
+<value status="0">0</value>
+</period>
+<period start="2330" end="0000">
+<value status="0">0</value>
+</period>
+</measuringchannel>
+<measuringchannel code="03" desc="счетчик-реактивная,прием">
+<period start="0000" end="0030">
+<value status="0">0</value>
+</period>
+<period start="0030" end="0100">
+<value status="0">0</value>
+</period>
+<period start="0100" end="0130">
+<value status="0">0</value>
+</period>
+<period start="0130" end="0200">
+<value status="0">0</value>
+</period>
+<period start="0200" end="0230">
+<value status="0">0</value>
+</period>
+<period start="0230" end="0300">
+<value status="0">0</value>
+</period>
+<period start="0300" end="0330">
+<value status="0">0</value>
+</period>
+<period start="0330" end="0400">
+<value status="0">0</value>
+</period>
+<period start="0400" end="0430">
+<value status="0">0</value>
+</period>
+<period start="0430" end="0500">
+<value status="0">0</value>
+</period>
+<period start="0500" end="0530">
+<value status="0">0</value>
+</period>
+<period start="0530" end="0600">
+<value status="0">0</value>
+</period>
+<period start="0600" end="0630">
+<value status="0">0</value>
+</period>
+<period start="0630" end="0700">
+<value status="0">0</value>
+</period>
+<period start="0700" end="0730">
+<value status="0">0</value>
+</period>
+<period start="0730" end="0800">
+<value status="0">0</value>
+</period>
+<period start="0800" end="0830">
+<value status="0">0</value>
+</period>
+<period start="0830" end="0900">
+<value status="0">0</value>
+</period>
+<period start="0900" end="0930">
+<value status="0">0</value>
+</period>
+<period start="0930" end="1000">
+<value status="0">0</value>
+</period>
+<period start="1000" end="1030">
+<value status="0">0</value>
+</period>
+<period start="1030" end="1100">
+<value status="0">0</value>
+</period>
+<period start="1100" end="1130">
+<value status="0">0</value>
+</period>
+<period start="1130" end="1200">
+<value status="0">0</value>
+</period>
+<period start="1200" end="1230">
+<value status="0">0</value>
+</period>
+<period start="1230" end="1300">
+<value status="0">0</value>
+</period>
+<period start="1300" end="1330">
+<value status="0">0</value>
+</period>
+<period start="1330" end="1400">
+<value status="0">0</value>
+</period>
+<period start="1400" end="1430">
+<value status="0">0</value>
+</period>
+<period start="1430" end="1500">
+<value status="0">0</value>
+</period>
+<period start="1500" end="1530">
+<value status="0">0</value>
+</period>
+<period start="1530" end="1600">
+<value status="0">0</value>
+</period>
+<period start="1600" end="1630">
+<value status="0">0</value>
+</period>
+<period start="1630" end="1700">
+<value status="0">0</value>
+</period>
+<period start="1700" end="1730">
+<value status="0">0</value>
+</period>
+<period start="1730" end="1800">
+<value status="0">0</value>
+</period>
+<period start="1800" end="1830">
+<value status="0">0</value>
+</period>
+<period start="1830" end="1900">
+<value status="0">0</value>
+</period>
+<period start="1900" end="1930">
+<value status="0">0</value>
+</period>
+<period start="1930" end="2000">
+<value status="0">0</value>
+</period>
+<period start="2000" end="2030">
+<value status="0">0</value>
+</period>
+<period start="2030" end="2100">
+<value status="0">0</value>
+</period>
+<period start="2100" end="2130">
+<value status="0">0</value>
+</period>
+<period start="2130" end="2200">
+<value status="0">0</value>
+</period>
+<period start="2200" end="2230">
+<value status="0">0</value>
+</period>
+<period start="2230" end="2300">
+<value status="0">0</value>
+</period>
+<period start="2300" end="2330">
+<value status="0">0</value>
+</period>
+<period start="2330" end="0000">
+<value status="0">0</value>
+</period>
+</measuringchannel>
+<measuringchannel code="02" desc="счетчик-активная,отдача">
+<period start="0000" end="0030">
+<value status="0">264</value>
+</period>
+<period start="0030" end="0100">
+<value status="0">263</value>
+</period>
+<period start="0100" end="0130">
+<value status="0">269</value>
+</period>
+<period start="0130" end="0200">
+<value status="0">0</value>
+</period>
+<period start="0200" end="0230">
+<value status="0">0</value>
+</period>
+<period start="0230" end="0300">
+<value status="0">0</value>
+</period>
+<period start="0300" end="0330">
+<value status="0">0</value>
+</period>
+<period start="0330" end="0400">
+<value status="0">0</value>
+</period>
+<period start="0400" end="0430">
+<value status="0">0</value>
+</period>
+<period start="0430" end="0500">
+<value status="0">0</value>
+</period>
+<period start="0500" end="0530">
+<value status="0">0</value>
+</period>
+<period start="0530" end="0600">
+<value status="0">0</value>
+</period>
+<period start="0600" end="0630">
+<value status="0">0</value>
+</period>
+<period start="0630" end="0700">
+<value status="0">0</value>
+</period>
+<period start="0700" end="0730">
+<value status="0">0</value>
+</period>
+<period start="0730" end="0800">
+<value status="0">0</value>
+</period>
+<period start="0800" end="0830">
+<value status="0">0</value>
+</period>
+<period start="0830" end="0900">
+<value status="0">0</value>
+</period>
+<period start="0900" end="0930">
+<value status="0">0</value>
+</period>
+<period start="0930" end="1000">
+<value status="0">0</value>
+</period>
+<period start="1000" end="1030">
+<value status="0">0</value>
+</period>
+<period start="1030" end="1100">
+<value status="0">0</value>
+</period>
+<period start="1100" end="1130">
+<value status="0">0</value>
+</period>
+<period start="1130" end="1200">
+<value status="0">0</value>
+</period>
+<period start="1200" end="1230">
+<value status="0">0</value>
+</period>
+<period start="1230" end="1300">
+<value status="0">0</value>
+</period>
+<period start="1300" end="1330">
+<value status="0">0</value>
+</period>
+<period start="1330" end="1400">
+<value status="0">0</value>
+</period>
+<period start="1400" end="1430">
+<value status="0">0</value>
+</period>
+<period start="1430" end="1500">
+<value status="0">0</value>
+</period>
+<period start="1500" end="1530">
+<value status="0">0</value>
+</period>
+<period start="1530" end="1600">
+<value status="0">0</value>
+</period>
+<period start="1600" end="1630">
+<value status="0">0</value>
+</period>
+<period start="1630" end="1700">
+<value status="0">0</value>
+</period>
+<period start="1700" end="1730">
+<value status="0">0</value>
+</period>
+<period start="1730" end="1800">
+<value status="0">0</value>
+</period>
+<period start="1800" end="1830">
+<value status="0">0</value>
+</period>
+<period start="1830" end="1900">
+<value status="0">0</value>
+</period>
+<period start="1900" end="1930">
+<value status="0">0</value>
+</period>
+<period start="1930" end="2000">
+<value status="0">0</value>
+</period>
+<period start="2000" end="2030">
+<value status="0">0</value>
+</period>
+<period start="2030" end="2100">
+<value status="0">0</value>
+</period>
+<period start="2100" end="2130">
+<value status="0">0</value>
+</period>
+<period start="2130" end="2200">
+<value status="0">0</value>
+</period>
+<period start="2200" end="2230">
+<value status="0">0</value>
+</period>
+<period start="2230" end="2300">
+<value status="0">0</value>
+</period>
+<period start="2300" end="2330">
+<value status="0">0</value>
+</period>
+<period start="2330" end="0000">
+<value status="0">0</value>
+</period>
+</measuringchannel>
+<measuringchannel code="04" desc="счетчик-реактивная,отдача">
+<period start="0000" end="0030">
+<value status="0">241</value>
+</period>
+<period start="0030" end="0100">
+<value status="0">236</value>
+</period>
+<period start="0100" end="0130">
+<value status="0">248</value>
+</period>
+<period start="0130" end="0200">
+<value status="0">0</value>
+</period>
+<period start="0200" end="0230">
+<value status="0">0</value>
+</period>
+<period start="0230" end="0300">
+<value status="0">0</value>
+</period>
+<period start="0300" end="0330">
+<value status="0">0</value>
+</period>
+<period start="0330" end="0400">
+<value status="0">0</value>
+</period>
+<period start="0400" end="0430">
+<value status="0">0</value>
+</period>
+<period start="0430" end="0500">
+<value status="0">0</value>
+</period>
+<period start="0500" end="0530">
+<value status="0">0</value>
+</period>
+<period start="0530" end="0600">
+<value status="0">0</value>
+</period>
+<period start="0600" end="0630">
+<value status="0">0</value>
+</period>
+<period start="0630" end="0700">
+<value status="0">0</value>
+</period>
+<period start="0700" end="0730">
+<value status="0">0</value>
+</period>
+<period start="0730" end="0800">
+<value status="0">0</value>
+</period>
+<period start="0800" end="0830">
+<value status="0">0</value>
+</period>
+<period start="0830" end="0900">
+<value status="0">0</value>
+</period>
+<period start="0900" end="0930">
+<value status="0">0</value>
+</period>
+<period start="0930" end="1000">
+<value status="0">0</value>
+</period>
+<period start="1000" end="1030">
+<value status="0">0</value>
+</period>
+<period start="1030" end="1100">
+<value status="0">0</value>
+</period>
+<period start="1100" end="1130">
+<value status="0">0</value>
+</period>
+<period start="1130" end="1200">
+<value status="0">0</value>
+</period>
+<period start="1200" end="1230">
+<value status="0">0</value>
+</period>
+<period start="1230" end="1300">
+<value status="0">0</value>
+</period>
+<period start="1300" end="1330">
+<value status="0">0</value>
+</period>
+<period start="1330" end="1400">
+<value status="0">0</value>
+</period>
+<period start="1400" end="1430">
+<value status="0">0</value>
+</period>
+<period start="1430" end="1500">
+<value status="0">0</value>
+</period>
+<period start="1500" end="1530">
+<value status="0">0</value>
+</period>
+<period start="1530" end="1600">
+<value status="0">0</value>
+</period>
+<period start="1600" end="1630">
+<value status="0">0</value>
+</period>
+<period start="1630" end="1700">
+<value status="0">0</value>
+</period>
+<period start="1700" end="1730">
+<value status="0">0</value>
+</period>
+<period start="1730" end="1800">
+<value status="0">0</value>
+</period>
+<period start="1800" end="1830">
+<value status="0">0</value>
+</period>
+<period start="1830" end="1900">
+<value status="0">0</value>
+</period>
+<period start="1900" end="1930">
+<value status="0">0</value>
+</period>
+<period start="1930" end="2000">
+<value status="0">0</value>
+</period>
+<period start="2000" end="2030">
+<value status="0">0</value>
+</period>
+<period start="2030" end="2100">
+<value status="0">0</value>
+</period>
+<period start="2100" end="2130">
+<value status="0">0</value>
+</period>
+<period start="2130" end="2200">
+<value status="0">0</value>
+</period>
+<period start="2200" end="2230">
+<value status="0">0</value>
+</period>
+<period start="2230" end="2300">
+<value status="0">0</value>
+</period>
+<period start="2300" end="2330">
+<value status="0">0</value>
+</period>
+<period start="2330" end="0000">
+<value status="0">0</value>
+</period>
+</measuringchannel>
+</measuringpoint>
+</area>
+</message>

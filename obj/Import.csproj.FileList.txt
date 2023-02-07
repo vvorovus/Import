@@ -1,0 +1,11 @@
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Import.exe
+obj\Release\Import.pdb
+.\Import.exe
+.\Import.pdb
+bin\Debug\Import.exe
+bin\Debug\Import.pdb
+bin\Debug\NExcel.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Import.exe
+obj\Debug\Import.pdb

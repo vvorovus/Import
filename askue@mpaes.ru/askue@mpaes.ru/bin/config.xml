@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<config>
+    <connection>Data Source=SQLASKUE2;Initial Catalog=АСКУЭ;Integrated Security=True</connection>
+</config>
